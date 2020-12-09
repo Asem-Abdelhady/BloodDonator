@@ -32,6 +32,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.example.bloodonation1.Presesntation.AboutUsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCPl902IUTh2SA1_7f-mLcc4_g2Hcn_v40" />
@@ -39,7 +43,9 @@
             android:name="google.com.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name="com.example.bloodonation1.Presesntation.MapActivity" />
+        <activity
+            android:name="com.example.bloodonation1.Presesntation.MapActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.bloodonation1.Presesntation.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar"
@@ -53,7 +59,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.bloodonation1.Presesntation.MainActivity" />
+        <activity
+            android:name="com.example.bloodonation1.Presesntation.ConfirmationActivity"
+            android:parentActivityName="com.example.bloodonation1.Presesntation.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.bloodonation1.Presesntation.MainActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

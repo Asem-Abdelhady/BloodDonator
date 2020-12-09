@@ -21,4 +21,8 @@ public class AuthRepository {
     public boolean isAuthorized () {
         return firebaseAuth.getCurrentUser() != null;
     }
+
+    public void Logout(){
+        firebaseAuth.signOut();
+    }
 }

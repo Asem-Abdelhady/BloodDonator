@@ -77,6 +77,7 @@
 
             <Button
                 android:id="@+id/Login"
+                android:layout_width="180dp"
                 style="@style/loginButton"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin"
@@ -85,8 +86,8 @@
 
             <TextView
                 style="@style/parent"
+                android:id="@+id/go_to_register"
                 android:layout_marginTop="@dimen/loginViewsMargin"
-                android:onClick="onLoginClick"
                 android:text="New user? Register Now"
                 android:textAlignment="center"
                 android:textColor="@color/themeColor"
@@ -149,8 +150,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:onClick="onImgClick"
         android:layout_marginRight="11dp"
         android:layout_marginBottom="30dp"
-        android:onClick="onLoginClick"
         android:src="@drawable/ic_add_img" />
 </RelativeLayout>

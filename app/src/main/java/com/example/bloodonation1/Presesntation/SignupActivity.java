@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bloodonation1.Presesntation.ViewModel.SignupViewModel;
@@ -22,6 +23,7 @@ import io.reactivex.disposables.Disposable;
 
 
 public class SignupActivity extends AppCompatActivity {
+    TextView goToLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class SignupActivity extends AppCompatActivity {
         changeStatusBarColor();
 
         Button SignUp = findViewById(R.id.SignUp);
+
+        goToLogin = findViewById(R.id.go_to_login);
 
         final EditText Email = findViewById(R.id.editTextEmail);
         final EditText Mobile = findViewById(R.id.editTextMobile);
@@ -85,11 +89,23 @@ public class SignupActivity extends AppCompatActivity {
                         @Override
                         public void onNext(FirebaseUser firebaseUser) {
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
                         }
                     });
                 }
 
 
+            }
+        });
+        goToLogin();
+    }
+
+    private void goToLogin(){
+        goToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
             }
         });
     }
@@ -102,8 +118,7 @@ public class SignupActivity extends AppCompatActivity {
         }
     }
 
-    public void onLoginClick (View view) {
+    public void onSignupImgClick (View view) {
         startActivity(new Intent(this, LoginActivity.class));
     }
-
 }

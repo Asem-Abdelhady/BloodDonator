@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bloodonation1">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,15 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Presesntation.AboutUsActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCPl902IUTh2SA1_7f-mLcc4_g2Hcn_v40"/>
-
+            android:value="AIzaSyCPl902IUTh2SA1_7f-mLcc4_g2Hcn_v40" />
         <meta-data
             android:name="google.com.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
+            android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".Presesntation.MapActivity"></activity>
+        <activity
+            android:name=".Presesntation.MapActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Presesntation.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar"
@@ -38,7 +42,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Presesntation.MainActivity"></activity>
+        <activity
+            android:name=".Presesntation.ConfirmationActivity"
+            android:parentActivityName=".Presesntation.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Presesntation.MainActivity"
+            android:theme="@style/AppTheme"
+            ></activity>
     </application>
 
 </manifest>

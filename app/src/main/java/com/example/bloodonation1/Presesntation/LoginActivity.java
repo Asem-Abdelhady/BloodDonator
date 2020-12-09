@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bloodonation1.Presesntation.ViewModel.LoginViewModel;
 import com.example.bloodonation1.R;
 import com.google.firebase.auth.FirebaseUser;
 
-import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 
@@ -23,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // ui
     private EditText passwordText, emailText;
+    private TextView registerText;
 
     // data
     private LoginViewModel viewModel;
@@ -38,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         emailText = findViewById(R.id.LoginEmail);
         passwordText = findViewById(R.id.LoginPassword);
 
+        registerText = findViewById(R.id.go_to_register);
+
         viewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
 
         if (viewModel.isAuthorized()) {
@@ -45,7 +47,19 @@ public class LoginActivity extends AppCompatActivity {
             finish();
             return;
         }
+        goToRegister();
 
+    }
+
+
+    private void goToRegister(){
+        registerText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SignupActivity.class));
+                finish();
+            }
+        });
     }
 
     public void onLoginClick (View view) {
@@ -58,6 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             if (TextUtils.isEmpty(password)) emailText.setError("You should provide a password");
             return;
         }
+
 
         viewModel.Login(email, password).subscribe(new SingleObserver<FirebaseUser>() {
 
@@ -78,5 +93,8 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    public void onImgClick (View view) {
+        startActivity(new Intent(this, SignupActivity.class));
     }
 }

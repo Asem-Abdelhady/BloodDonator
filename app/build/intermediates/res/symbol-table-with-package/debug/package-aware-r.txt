@@ -223,9 +223,15 @@ attr drawableSize
 attr drawerArrowStyle
 attr dropDownListViewStyle
 attr dropdownListPreferredItemHeight
+attr edMaxAnimationDuration
+attr edMenuBackground
+attr edMenuSize
+attr edPosition
+attr edTouchBezelSize
 attr editTextBackground
 attr editTextColor
 attr editTextStyle
+attr elasticDrawerStyle
 attr elevation
 attr emptyVisibility
 attr enforceMaterialTheme
@@ -966,6 +972,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+drawable a_add
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -1050,9 +1057,11 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable asem
 drawable avd_hide_password
 drawable avd_show_password
 drawable button_background_blue
+drawable button_background_white
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1080,18 +1089,37 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_access_time_black_24dp
+drawable ic_add_black_24dp
 drawable ic_add_img
 drawable ic_back_img
+drawable ic_edit_location_black_24dp
+drawable ic_exit_to_app_black_24dp
 drawable ic_facebook
 drawable ic_google_plus
+drawable ic_icon_foreground
+drawable ic_info_black_24dp
+drawable ic_info_draw
+drawable ic_invert_colors_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_local_phone_black_24dp
+drawable ic_location_on_black_24dp
 drawable ic_login_hero
+drawable ic_magnify
+drawable ic_map_white_24dp
+drawable ic_menu_black_24dp
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_person_black_24dp
 drawable ic_register_hero
+drawable ic_search_black_24dp
+drawable ic_send_black_24dp
 drawable ic_side_bg
+drawable ic_star_black_24dp
+drawable mmos
+drawable mos
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1110,11 +1138,13 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id About_us
 id CTRL
 id FUNCTION
 id Login
 id LoginEmail
 id LoginPassword
+id Logout
 id META
 id SHIFT
 id SYM
@@ -1141,8 +1171,11 @@ id actions
 id activity_chooser_view_content
 id add
 id add_button
+id add_float_button
 id adjust_height
 id adjust_width
+id age
+id age_spinner
 id alertTitle
 id all
 id always
@@ -1151,6 +1184,8 @@ id auto
 id barrier
 id beginning
 id blocking
+id bloodType
+id blood_spinner
 id bottom
 id buttonPanel
 id cancel_action
@@ -1163,6 +1198,8 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id confirm_name
+id confirm_phone
 id container
 id content
 id contentPanel
@@ -1171,6 +1208,7 @@ id custom
 id customPanel
 id dark
 id dataBinding
+id date
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1181,6 +1219,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id drawerlayout
 id editTextEmail
 id editTextMobile
 id editTextName
@@ -1200,6 +1239,8 @@ id filled
 id fixed
 id forever
 id ghost_view
+id go_to_login
+id go_to_register
 id gone
 id group_divider
 id groups
@@ -1223,15 +1264,18 @@ id line1
 id line3
 id listMode
 id list_item
+id main_frame_layout
 id map
 id masked
 id media_actions
+id menulayout
 id message
 id middle
 id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name
 id navigation_header_container
 id never
 id none
@@ -1248,10 +1292,14 @@ id parent
 id parentPanel
 id parent_matrix
 id percent
+id phone
 id pin
 id progress_circular
 id progress_horizontal
 id radio
+id rate_app
+id recycler_view
+id req_map
 id right
 id right_icon
 id right_side
@@ -1306,10 +1354,13 @@ id tag_unhandled_key_listeners
 id terrain
 id text
 id text2
+id textInputAge
+id textInputBloodtype
 id textInputEmail
 id textInputMobile
 id textInputName
 id textInputPassword
+id textInputphone
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -1334,6 +1385,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id view_marker
 id view_offset_helper
 id visible
 id wide
@@ -1388,6 +1440,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about_us2
+layout activity_confirmation
 layout activity_login
 layout activity_main
 layout activity_map
@@ -1423,6 +1477,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout request_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1468,8 +1523,11 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about
+string age
 string app_name
 string appbar_scrolling_view_behavior
+string blood_type
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
@@ -2016,6 +2074,7 @@ style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense
 style Widget_MaterialComponents_Toolbar
 style Widget_Support_CoordinatorLayout
 style loginButton
+style loginButton_wt
 style modifiedEditText
 style parent
 style spinnerHintText
@@ -2058,6 +2117,7 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
+styleable ElasticDrawer edMaxAnimationDuration edMenuBackground edMenuSize edPosition edTouchBezelSize
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing

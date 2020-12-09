@@ -1,10 +1,10 @@
-#Wed Nov 20 19:04:39 CET 2019
+#Wed Jan 01 02:00:42 EET 2020
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=C\:\\Users\\pc\\Desktop\\Senior-s-year-project-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
-base.1=C\:\\Users\\pc\\Desktop\\Senior-s-year-project-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
-base.0=C\:\\Users\\pc\\Desktop\\Senior-s-year-project-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+base.2=C\:\\Users\\mohamed abuelela\\Desktop\\New folder (4)\\New folder\\Senior-s-year-project-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.1=C\:\\Users\\mohamed abuelela\\Desktop\\New folder (4)\\New folder\\Senior-s-year-project-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.0=C\:\\Users\\mohamed abuelela\\Desktop\\New folder (4)\\New folder\\Senior-s-year-project-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
