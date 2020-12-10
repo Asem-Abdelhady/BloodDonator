@@ -1,7 +1,6 @@
-# chatcake-android
+# BlooDoniator android
 
-##Simple text chat application using Java and XML
-
+##Android application
 Some dependencies used: <br>
 <ul>
 	<li>Android support design library</li>
