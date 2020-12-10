@@ -5,8 +5,9 @@ Some dependencies used: <br>
 <ul>
 	<li>Android support design library</li>
 	<li>Firebase services</li>
+	<li>RX java</li>
+	<li>Room android architecture
 	<li>other UI libiraries</li>
-	<li>Life cycle android archticture component</li>
 </ul>
 
 
